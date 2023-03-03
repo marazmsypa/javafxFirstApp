@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<?import javafx.geometry.Insets?>
+<VBox xmlns="http://javafx.com/javafx"
+      xmlns:fx="http://javafx.com/fxml"
+      fx:controller="com.example.test.ModelWindowController"
+      prefHeight="400.0" prefWidth="600.0" spacing="20.0" >
+    <padding>
+        <Insets top="20.0" right="20.0" left="20.0" bottom="20.0"/>
+    </padding>
+    <HBox spacing="20.0">
+        <VBox spacing="20.0">
+            <Label text="Данные заявителя"></Label>
+            <HBox spacing="5.0">
+                <Label text="Фамилия"/>
+                <Label fx:id="surnameLabel" text="НЕ null"/>
+            </HBox>
+            <HBox spacing="5.0">
+                <Label text="Имя"/>
+                <Label fx:id="nameLabel"/>
+            </HBox>
+            <HBox spacing="5.0">
+                <Label text="Отчество"/>
+                <Label fx:id="patronymicLabel"/>
+            </HBox>
+            <HBox spacing="5.0">
+                <Label text="Телефон"/>
+                <Label fx:id="phoneLabel"/>
+            </HBox>
+            <HBox spacing="5.0">
+                <Label text="E-mail"/>
+                <Label fx:id="emailLabel"/>
+            </HBox>
+            <HBox spacing="5.0">
+                <Label text="Организация"/>
+                <Label fx:id="organizationLabel"/>
+            </HBox>
+            <HBox spacing="5.0">
+                <Label text="Дата рождения"/>
+                <Label fx:id="birthdateLabel"/>
+            </HBox>
+            <HBox spacing="5.0">
+                <Label text="Серия пасспорта"/>
+                <Label fx:id="passseriaLabel"/>
+            </HBox>
+            <HBox spacing="5.0">
+                <Label text="Номер пасспорта"/>
+                <Label fx:id="passnumberLabel"/>
+            </HBox>
+        </VBox>
+        <VBox spacing="20.0">
+            <Label text="Данные заявки"/>
+            <HBox spacing="5.0">
+                <Label text="Цель посещения"/>
+                <Label fx:id="visitPurposeLabel"/>
+            </HBox>
+            <HBox spacing="5.0">
+                <Label text="Тип заявки"/>
+                <Label fx:id="requestTypeLabelLabel"/>
+            </HBox>
+            <HBox spacing="5.0">
+                <Label text="Статус заявки"/>
+                <Label fx:id="statusLabel"/>
+            </HBox>
+        </VBox>
+    </HBox>
+
+    <HBox spacing="5.0">
+       <DatePicker fx:id="mainDatePicker"/>
+    </HBox>
+    <HBox spacing="5.0">
+        <Button text="Закрыть" onAction="#closeWindow"></Button>
+        <Button text="Отклонить заявку" onAction="#declineRequest"></Button>
+        <Button text="Принять заявку" onAction="#aceptRequest"></Button>
+    </HBox>
+
+</VBox>

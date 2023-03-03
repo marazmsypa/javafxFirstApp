@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<?import javafx.geometry.Insets?>
+<VBox xmlns="http://javafx.com/javafx"
+      xmlns:fx="http://javafx.com/fxml"
+      fx:controller="com.example.test.MainWindowController"
+      prefHeight="400.0" prefWidth="600.0" alignment="CENTER" spacing="20.0">
+    <HBox spacing="10">
+        <padding>
+            <Insets top="20.0" bottom="20.0" left="20.0" right="20.0"/>
+        </padding>
+        <Label fx:id="mainLabel" text="Аутентификация успешна">
+
+        </Label>
+        <Button fx:id="backToAuthButton" onAction="#onBackButtonAction" text="Вернуться на страницу аутентификации"/>
+        <Button  onAction="#updateTable" text="Обновить таблицу"/>
+    </HBox>
+   <Button text="Редактировать выбранную заявку" onAction="#redactRequest"/>
+    <HBox spacing="10">
+        <padding>
+            <Insets top="20.0" bottom="20.0" left="20.0" right="20.0"/>
+        </padding>
+        <Label text="Фильтровать по подразделениям"/>
+        <ComboBox fx:id="subdivisionFilterCombo" onAction="#updateTable"/>
+        <Label text="Фильтровать по типам заявок"/>
+        <ComboBox fx:id="typeFilterCombo" onAction="#updateTable"/>
+        <Label text="Фильтровать по статусам заявок"/>
+        <ComboBox fx:id="statusFilterCombo" onAction="#updateTable"/>
+    </HBox>
+    <TableView fx:id="requestsTableView" >
+        <columns>
+            <TableColumn text="Тип заявки" fx:id="requestTypeColumn"/>
+            <TableColumn text="Статус заявки" fx:id="requestStatusColumn"/>
+            <TableColumn text="Дата подачи заявки" fx:id="requestDateStartColumn"/>
+            <TableColumn text="Дата конца действия заявки" fx:id="requestDateEndColumn"/>
+            <TableColumn text="Цель визита" fx:id="visitPurposeColumn"/>
+            <TableColumn text="ФИО принимающего работника" fx:id="employeeColumn"/>
+            <TableColumn text="Тип посещения" fx:id="typeColumn"/>
+            <TableColumn text="Посетитель" fx:id="visitorColumn"/>
+        </columns>
+
+    </TableView>
+</VBox>
